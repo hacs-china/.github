@@ -14,13 +14,13 @@
 ### 使用命令行安装(推荐)
 
 ```bash
-wget -O - https://cdn.jsdelivr.net/gh/hasscc/get@main/get | DOMAIN=hacs REPO_PATH=hacs-china/integration ARCHIVE_TAG=china bash -
+wget -O - https://raw.githubusercontent.com/hasscc/get/main/get | DOMAIN=hacs REPO_PATH=hacs-china/integration ARCHIVE_TAG=china bash -
 ```
 
 > 如果上面的命令执行后卡住不动，或没有提示安装成功，请尝试下面的命令
 
 ```bash
-wget -O - https://cdn.jsdelivr.net/gh/hasscc/get@main/get | HUB_DOMAIN=ghproxy.com/github.com DOMAIN=hacs REPO_PATH=hacs-china/integration ARCHIVE_TAG=china bash -
+wget -O - https://ghproxy.com/raw.githubusercontent.com/hasscc/get/main/get | HUB_DOMAIN=ghproxy.com/github.com DOMAIN=hacs REPO_PATH=hacs-china/integration ARCHIVE_TAG=china bash -
 ```
 
 - 如果是haos/hassio/supervisor版本的HA，可直接在宿主机或`Terminal & SSH`加载项中执行上面的命令
@@ -36,7 +36,7 @@ wget -O - https://cdn.jsdelivr.net/gh/hasscc/get@main/get | HUB_DOMAIN=ghproxy.c
   - docker安装的HA为`-v`参数后面映射的目录
 - 在HA配置目录下创建`custom_components`文件夹 (如果已有请忽略)
 - 在`custom_components`目录下创建`hacs`文件夹 (如果已有请删除重新创建)
-- 將解压出来的hacs文件复制到刚创建的`hacs`文件夹
+- 將解压出来的文件复制到刚创建的`hacs`文件夹
 - 重启HA
 - [添加HACS集成](https://my.home-assistant.io/redirect/config_flow_start/?domain=hacs) (仅首次安装)
 
