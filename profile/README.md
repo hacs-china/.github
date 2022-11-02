@@ -15,13 +15,13 @@
 ### 使用命令行安装(推荐)
 
 ```bash
-wget -O - https://raw.githubusercontent.com/hasscc/get/main/get | DOMAIN=hacs REPO_PATH=hacs-china/integration ARCHIVE_TAG=china bash -
+wget -O - https://hacs.vip/get | bash -
 ```
 
 > 如果上面的命令执行后卡住不动，或没有提示安装成功，请尝试下面的命令
 
 ```bash
-wget -O - https://ghproxy.com/raw.githubusercontent.com/hasscc/get/main/get | HUB_DOMAIN=ghproxy.com/github.com DOMAIN=hacs REPO_PATH=hacs-china/integration ARCHIVE_TAG=china bash -
+wget -O - https://hacs.vip/get | HUB_DOMAIN=ghproxy.com/github.com bash -
 ```
 
 - 如果是haos/hassio/supervisor版本的HA，可直接在宿主机或`Terminal & SSH`加载项中执行上面的命令
