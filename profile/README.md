@@ -81,6 +81,9 @@ wget -O - https://hacs.vip/get | HUB_DOMAIN=ghproxy.com/github.com bash -
 ## 常见问题
 
 - [极速版和官方HACS的差别有那些？](https://github.com/hacs-china/integration/compare/main...china)
+  - 使用[ghproxy.com](https://ghproxy.com)和[fastgit.org](https://fastgit.org)提供的Github镜像服务加速下载集成/卡片
+  - 可以使用三方提供或自己创建的Github API镜像加速获取集成列表和详情
+  - 优先展示中文的Readme文档
 
 
 ------
