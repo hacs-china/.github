@@ -50,10 +50,9 @@ wget -O - https://hacs.vip/get | HUB_DOMAIN=ghps.cc/github.com bash -
 > 不过遗憾的是，首次安装HACS时的授权过程仍然还不能被加速，如果你在授权过程中一直转圈，请稍后再试或使用其他科学的方式。
 
 - 社区提供的免费镜像：
+  - `https://ghapi.hacs.vip` - [@al-one](https://github.com/al-one)
   - `https://ghapi-cf.hacs.vip/api` - [@al-one](https://github.com/al-one)
   - `https://hacs-china.chrome7.com/api` - [@goxofy](https://github.com/goxofy)
-  - `https://cn.hacs.tk/api` - [@cheny95](https://github.com/cheny95)
-  - `https://hacs.liangshe.ng/api` - [@louliangsheng](https://github.com/louliangsheng)
   - `https://hacs-china.casen.tk/api` - [@CasenChan](https://github.com/CasenChan)
 
 > **Note**
