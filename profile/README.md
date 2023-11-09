@@ -5,7 +5,7 @@
 [![stars](https://img.shields.io/github/stars/hacs-china/integration)](https://github.com/hacs-china/integration/stargazers)
 
 [HACS](https://hacs.xyz)是一款优秀的 [Home Assistant](https://www.home-assistant.io) 集成商店，然而国人想要使用它下载插件或前端卡片却困难重重，主要原因就是国内的网络环境。
-本项目使用了[ghproxy.com](https://ghproxy.com)和[fastgit.org](https://fastgit.org)提供的Github镜像服务，可以让大家更快的下载商店里的插件。
+本项目使用了[gitmirror.com](https://gitmirror.com)和[fastgit.org](https://fastgit.org)等提供的Github镜像服务，可以让大家更快的下载商店里的插件。
 
 <a name="install"></a>
 ## 安装
@@ -15,13 +15,7 @@
 ### 使用命令行安装(推荐)
 
 ```bash
-wget -O - https://hacs.vip/get | bash -
-```
-
-> 如果上面的命令执行后卡住不动，或没有提示安装成功，请尝试下面的命令
-
-```bash
-wget -O - https://hacs.vip/get | HUB_DOMAIN=ghproxy.com/github.com bash -
+wget -O - https://hacs.vip/get | HUB_DOMAIN=ghps.cc/github.com bash -
 ```
 
 - 如果是haos/hassio/supervisor版本的HA，可直接在宿主机或`Terminal & SSH`加载项中执行上面的命令
