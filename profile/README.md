@@ -15,7 +15,7 @@
 ### 使用命令行安装(推荐)
 
 ```bash
-wget -O - https://hacs.vip/get | HUB_DOMAIN=ghps.cc/github.com bash -
+wget -O - https://hacs.vip/get | bash -
 ```
 
 - 如果是haos/hassio/supervisor版本的HA，可直接在宿主机或`Terminal & SSH`加载项中执行上面的命令
