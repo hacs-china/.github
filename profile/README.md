@@ -8,20 +8,33 @@
 本项目使用了[gitmirror.com](https://gitmirror.com)和[fastgit.org](https://fastgit.org)等提供的Github镜像服务，可以让大家更快的下载商店里的插件。
 
 <a name="install"></a>
-## 安装
+## 安装/更新
 
 > 本项目是HACS官方集成的修改版，安装本项目版本会覆盖官方的集成，但是无需重新配置集成(共用一套配置)，因此你可以放心安装。如果想切换到官方版本，使用官方的shell命令再安装即可。
+>
+> 以下几种方法任选其一！
 
-### 使用命令行安装(推荐)
+#### 方法1️⃣: 使用命令行安装(推荐)
 
-```bash
+```shell
 wget -O - https://hacs.vip/get | bash -
 ```
 
 - 如果是haos/hassio/supervisor版本的HA，可直接在宿主机或`Terminal & SSH`加载项中执行上面的命令
 - 如果是core/docker版本的HA，需要ssh登陆宿主机后，并cd进入到HA配置目录再执行安装命令
 
-### 手动安装
+#### 方法2️⃣: `shell_command`服务
+
+1. 复制代码到HA配置文件 `configuration.yaml`
+    ```yaml
+    shell_command:
+      update_hacs_china: |-
+        wget -O - https://hacs.vip/get | bash -
+    ```
+2. 重启HA
+3. 在开发者工具中执行服务 [`service: shell_command.update_hacs_china`](https://my.home-assistant.io/redirect/developer_call_service/?service=shell_command.update_hacs_china)
+
+#### 方法3️⃣: 手动安装
 
 - [点击这里下载](https://github.com/hacs-china/integration/releases/latest/download/hacs.zip)安装包并解压 (如果下载不了请点[这里](https://ghproxy.com/github.com/hacs-china/integration/releases/latest/download/hacs.zip)或[这里](https://hub.fastgit.xyz/hacs-china/integration/releases/latest/download/hacs.zip))
 - 通过samba/ftp进入HA配置目录，通常为以下目录：
