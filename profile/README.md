@@ -14,7 +14,7 @@
 >
 > 以下几种方法任选其一！
 
-#### 方法1️⃣: 使用命令行安装(推荐)
+#### 方法1️⃣: 使用命令行安装
 
 ```shell
 wget -O - https://hacs.vip/get | bash -
@@ -23,7 +23,14 @@ wget -O - https://hacs.vip/get | bash -
 - 如果是haos/hassio/supervisor版本的HA，可直接在宿主机或`Terminal & SSH`加载项中执行上面的命令
 - 如果是core/docker版本的HA，需要ssh登陆宿主机后，并cd进入到HA配置目录再执行安装命令
 
-#### 方法2️⃣: `shell_command`服务
+#### 方法2️⃣: [`upgrade`](https://my.home-assistant.io/redirect/developer_call_service/?service=hacs.upgrade)服务
+
+> 需要HACS极速版v1.33.0.3版本及以上
+
+1. 在开发者工具中执行服务 [`service: hacs.upgrade`](https://my.home-assistant.io/redirect/developer_call_service/?service=hacs.upgrade)
+2. 重启HA使更新后的HACS生效
+
+#### 方法3️⃣: [`shell_command`](https://my.home-assistant.io/redirect/developer_call_service/?service=shell_command.update_hacs_china)服务
 
 1. 复制代码到HA配置文件 `configuration.yaml`
     ```yaml
@@ -31,10 +38,11 @@ wget -O - https://hacs.vip/get | bash -
       update_hacs_china: |-
         wget -O - https://hacs.vip/get | bash -
     ```
-2. 重启HA
+2. 重启HA使配置生效
 3. 在开发者工具中执行服务 [`service: shell_command.update_hacs_china`](https://my.home-assistant.io/redirect/developer_call_service/?service=shell_command.update_hacs_china)
+4. 再次重启HA使更新后的HACS生效
 
-#### 方法3️⃣: 手动安装
+#### 方法4️⃣: 手动安装
 
 - [点击这里下载](https://github.com/hacs-china/integration/releases/latest/download/hacs.zip)安装包并解压 (如果下载不了请点[这里](https://ghproxy.com/github.com/hacs-china/integration/releases/latest/download/hacs.zip)或[这里](https://hub.fastgit.xyz/hacs-china/integration/releases/latest/download/hacs.zip))
 - 通过samba/ftp进入HA配置目录，通常为以下目录：
