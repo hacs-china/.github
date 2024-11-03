@@ -53,7 +53,7 @@ wget -O - https://get.hacs.vip | bash -
 
 #### 方法5️⃣: [`Docker安装`](https://hub.docker.com/r/hasscc/hacs)
 
-> 仅针对首次安装全新**Docker**版本的HA
+> 仅针对首次安装**Docker**版本的全新HA，已安装过自定义集成的HA使用此镜像效果同官方镜像
 
 1. 使用命令方式安装
     ```bash
