@@ -51,7 +51,39 @@ wget -O - https://get.hacs.vip | bash -
 3. 在开发者工具中执行动作 [`action: shell_command.update_hacs_china`](https://my.home-assistant.io/redirect/developer_call_service/?service=shell_command.update_hacs_china)
 4. 再次重启HA使更新后的HACS生效
 
-#### 方法5️⃣: 手动安装
+#### 方法5️⃣: [`Docker安装`](https://hub.docker.com/r/hasscc/hacs)
+
+> 仅针对首次安装全新**Docker**版本的HA
+
+1. 使用命令方式安装
+    ```bash
+    docker run -d \
+      --name homeassistant \
+      --privileged \
+      --restart=unless-stopped \
+      -e TZ=Asia/Shanghai \
+      -v /PATH_TO_YOUR_CONFIG:/config \
+      -v /run/dbus:/run/dbus:ro \
+      --network=host \
+      hasscc/hacs:stable
+    ```
+2. 使用Compose安装
+    ```yaml
+    services:
+      homeassistant:
+        container_name: homeassistant
+        image: hasscc/hacs:stable
+        volumes:
+          - /PATH_TO_YOUR_CONFIG:/config
+          - /etc/localtime:/etc/localtime:ro
+          - /run/dbus:/run/dbus:ro
+        restart: unless-stopped
+        privileged: true
+        network_mode: host
+    ```
+3. 启动后[添加HACS集成](https://my.home-assistant.io/redirect/config_flow_start/?domain=hacs)
+
+#### 方法6️⃣: 手动安装
 
 - [点击这里下载](https://github.com/hacs-china/integration/releases/latest/download/hacs.zip)安装包并解压 (如果下载不了请点[这里](https://ghproxy.com/github.com/hacs-china/integration/releases/latest/download/hacs.zip)或[这里](https://hub.fastgit.xyz/hacs-china/integration/releases/latest/download/hacs.zip))
 - 通过samba/ftp进入HA配置目录，通常为以下目录：
