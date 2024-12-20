@@ -18,6 +18,10 @@
 
 ```shell
 wget -O - https://get.hacs.vip | bash -
+
+# 或
+
+curl -fsSL get.hacs.vip | bash
 ```
 
 - 如果是haos/hassio/supervised版本的HA，可直接在宿主机或`Terminal & SSH`加载项中执行上面的命令
