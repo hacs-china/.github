@@ -55,9 +55,9 @@ curl -fsSL get.hacs.vip | bash
 3. 在开发者工具中执行动作 [`action: shell_command.update_hacs_china`](https://my.home-assistant.io/redirect/developer_call_service/?service=shell_command.update_hacs_china)
 4. 再次重启HA使更新后的HACS生效
 
-#### 方法5️⃣: [`Docker安装`](https://hub.docker.com/r/hasscc/hacs)
+#### 方法5️⃣: [`Docker安装`](https://hub.docker.com/r/hacn/hacn)
 
-> 仅针对首次安装**Docker**版本的全新HA，已安装过自定义集成的HA使用此镜像效果同官方镜像
+> 仅针对未安装HACS的**Docker**版本的HA
 
 1. 使用命令方式安装
     ```bash
@@ -69,14 +69,14 @@ curl -fsSL get.hacs.vip | bash
       -v /PATH_TO_YOUR_CONFIG:/config \
       -v /run/dbus:/run/dbus:ro \
       --network=host \
-      hasscc/hacs:stable
+      hacn/hacn:stable
     ```
 2. 使用Compose安装
     ```yaml
     services:
       homeassistant:
         container_name: homeassistant
-        image: hasscc/hacs:stable
+        image: hacn/hacn:stable
         volumes:
           - /PATH_TO_YOUR_CONFIG:/config
           - /etc/localtime:/etc/localtime:ro
